@@ -20,13 +20,7 @@ printsummary <- function(df_full, dvname, preddv){
   library(caTools)
   library(glmnet)
   library(VIF)
-
-  if(nchar(preddv)>1)
-    {
-      df_full[,dvname]=as.character(dvname);
-      preddv=as.character(preddv);
-    } 
-      
+     
    
   #override default 
   options(max.print=99999999);
