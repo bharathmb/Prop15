@@ -21,15 +21,15 @@ printsummary <- function(df_full, dvname, preddv){
   library(glmnet)
   library(VIF)
 
-  if(length(dvname)>1)
+  if(nchar(preddv)>1)
     {
-      dvname=as.character(dvname);
+      df_full[,dvname]=as.character(dvname);
       preddv=as.character(preddv);
     } 
-	#else {
-    #        dvname=as.numeric(dvname);
-    #        preddv=as.numeric(preddv);
-    #       }
+	else {
+            df_full[,dvname]=as.numeric(dvname);
+            preddv=as.numeric(preddv);
+           }
       
    
   #override default 
