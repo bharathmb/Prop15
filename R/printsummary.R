@@ -407,6 +407,8 @@ return(final_data_after_processing)
    #df_cleaned<-data_prep_code_fun(df_full, dvname);
    df_cleaned<-df_full
    write.csv(df_cleaned,"C:/opencpuapp_ip/cleaned_data.csv");  
-  print(summary(df_cleaned))
   invisible()
+  print(summary(df_cleaned))
+  
+  return(summary(df_cleaned))
 }
