@@ -409,6 +409,4 @@ return(final_data_after_processing)
    write.csv(df_cleaned,"C:/opencpuapp_ip/cleaned_data.csv");  
   invisible()
   print(summary(df_cleaned))
-  
-  return(summary(df_cleaned))
 }
