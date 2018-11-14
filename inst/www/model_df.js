@@ -94,8 +94,12 @@ $("#show_perf").on("click", function(){
 			var sig_var=full_output[1]
 			var output=full_output[2]
 			
+			alert(isChecked);
 			alert(full_output);
 			alert([full_output]);
+			alert(sig_var);
+			alert(output);
+			alert([full_output][1]);
 			
 			if(isChecked=="OEM")
 			{	
