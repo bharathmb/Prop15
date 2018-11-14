@@ -34,7 +34,7 @@ $(document).ready(function(){
 	"preddv" : preddv
     }, function(session){
       session.getObject(function(output){
-        $("#output code").text(output);	
+        //$("#output code").text(output);	
 		$("#status1").text("Cleaning Successful! Setting up the results");
 	
 		//FUNCTION CALLS TO SIGNIFICANT VARIABLE LIST & GRAPHS PLOTS
