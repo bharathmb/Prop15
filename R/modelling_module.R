@@ -11,6 +11,7 @@ modelling_module<-function(DV,model_selection,predictorClass)
       selectedModel <- which.max(metrics$accuracy)
       
       variables <- vars[selectedModel]
+      
       modResults <- metrics %>% select('tpr','fpr','tnr','fnr','accuracy')
       colnames(modResults) <- NULL
       metricOutput <- list()
@@ -165,7 +166,6 @@ modelling_module<-function(DV,model_selection,predictorClass)
     Accuracy<-EvaluationMeasures.Accuracy(Real = DV,Predicted = predicted_val, Positive = 1)
     res = roc(as.numeric(DV), pred_f)
     plot_res <- plot(res) 
-    print(table(DV,predicted_val))
     
     testCopy <- testData
     testCopy$DV <- DV
@@ -244,28 +244,41 @@ modelling_module<-function(DV,model_selection,predictorClass)
     
     hit.df$Threshold=labels$Threshold
     
+    hitMissRt <- ggplot(data = hit.df,aes(x = Threshold,y = Hits)) +
+      geom_point() +
+      geom_line(aes(color="darkblue")) +
+      labs(x="Threshold",
+           y="Hit Rate/Miss Rate",
+           title = "Hit Rate/Miss Rate") +
+      geom_point(mapping=aes(x = Threshold,y = Miss)) +
+      geom_line(aes(color="orange")) +
+      scale_color_discrete(labels=c("Capture Rate","Hit Rate")) +
+      coord_cartesian(xlim=c(0,1),ylim = c(0,1)) +
+      theme(panel.grid.major = element_blank(), 
+            panel.grid.minor = element_blank(),
+            panel.background = element_rect(fill = "lightblue"))
     
-    hitMissRt <- plot_ly(hit.df, 
-                         y = ~Hits, 
-                         x = ~Threshold,
-                         name='Hit Rate',
-                         type='scatter',
-                         mode='lines') %>%
-      add_trace(y = ~Miss,
-                name='Capture Rate',
-                mode='lines') %>%
-      
-      layout(xaxis = list(range = c(0,1), 
-                          zeroline = F, 
-                          showgrid = F,
-                          title = "Threshold"),
-             yaxis = list(range = c(0,1), 
-                          zeroline = F, 
-                          showgrid = F,
-                          domain = c(0, 0.9),
-                          title = "Hit Rate/Miss Rate"),
-             plot_bgcolor = "aliceblue",title="Hit Rate vs Capture Rate"
-      )
+    #hitMissRt <- plot_ly(hit.df, 
+    #                    y = ~Hits, 
+    #                   x = ~Threshold,
+    #                     name='Hit Rate',
+    #                     type='scatter',
+    #                     mode='lines') %>%
+    #  add_trace(y = ~Miss,
+    #          name='Capture Rate',
+    #          mode='lines') %>%
+    #
+    #  layout(xaxis = list(range = c(0,1), 
+    #                      zeroline = F, 
+    #                      showgrid = F,
+    #                      title = "Threshold"),
+    #         yaxis = list(range = c(0,1), 
+    #                      zeroline = F, 
+    #                      showgrid = F,
+    #                      domain = c(0, 0.9),
+    #                      title = "Hit Rate/Miss Rate"),
+    #         plot_bgcolor = "aliceblue",title="Hit Rate vs Capture Rate"
+    #  )
     return (hitMissRt)
   }
   
@@ -390,7 +403,6 @@ modelling_module<-function(DV,model_selection,predictorClass)
                      data =train_lr, 
                      family = binomial)
     
-    print(summary(lr_model))
     
     predResult <- predFunction(lr_model,train_lr,test_lr,positive_class,"LR")
     
@@ -403,7 +415,6 @@ modelling_module<-function(DV,model_selection,predictorClass)
     important_variables <- variable_importance(lr_model,"n")
     
     model_evaluations <- model_evaluations[rowSums(is.na(model_evaluations)) != ncol(model_evaluations),]
-    print(model_evaluations)
     
     if(flagInp)
     {
@@ -433,7 +444,6 @@ modelling_module<-function(DV,model_selection,predictorClass)
                             ntrees=100,
                             importance=T)
     #Identifying threshold
-    print(summary(treeimp))
     
     predResult <- predFunction(treeimp,train_rf,test_rf,positive_class,"RF")
     
