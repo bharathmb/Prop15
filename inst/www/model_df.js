@@ -248,7 +248,7 @@ alert(dvname);	alert(isChecked);alert(preddv);
 				
 				//var req = $("#plotdiv1").rplot("randomplot", {	nfield : 100, distfield : "normal"})
 				
-				var req = $("#plotdiv2").rplot("load_graph");
+				var req = $("#plotdiv2").rplot("load_graph", {"dv":dvname});
 				
 				//if R returns an error, alert the error message
 				req.fail(function(){
