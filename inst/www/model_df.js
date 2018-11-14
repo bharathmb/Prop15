@@ -91,7 +91,7 @@ $("#show_perf").on("click", function(){
 		session.getObject(function(full_output){			
 			$("#building_inter").show().delay(1000).fadeOut(100,showModelResults);
 			
-			var sig_var=full_output[2]
+			var sig_var=full_output[0]
 			var output=full_output[1]
 			
 			alert(isChecked);
@@ -105,39 +105,39 @@ $("#show_perf").on("click", function(){
 			{	
 				var table = document.getElementById("results_table").tBodies[1];
 				var cur_op=output[1];
-				table.rows[0].cells[1].innerHTML=cur_op[1];
-				table.rows[0].cells[2].innerHTML=cur_op[2];
-				table.rows[0].cells[3].innerHTML=cur_op[3];
-				table.rows[0].cells[4].innerHTML=cur_op[4];
-				table.rows[0].cells[5].innerHTML=cur_op[5];
+				table.rows[0].cells[1].innerHTML=cur_op[0];
+				table.rows[0].cells[2].innerHTML=cur_op[1];
+				table.rows[0].cells[3].innerHTML=cur_op[2];
+				table.rows[0].cells[4].innerHTML=cur_op[3];
+				table.rows[0].cells[5].innerHTML=cur_op[4];
 				var cur_op=output[2];
-				table.rows[0].cells[1].innerHTML=cur_op[1];
-				table.rows[0].cells[2].innerHTML=cur_op[2];
-				table.rows[0].cells[3].innerHTML=cur_op[3];
-				table.rows[0].cells[4].innerHTML=cur_op[4];
-				table.rows[0].cells[5].innerHTML=cur_op[5];
+				table.rows[0].cells[1].innerHTML=cur_op[0];
+				table.rows[0].cells[2].innerHTML=cur_op[1];
+				table.rows[0].cells[3].innerHTML=cur_op[2];
+				table.rows[0].cells[4].innerHTML=cur_op[3];
+				table.rows[0].cells[5].innerHTML=cur_op[4];
 				var cur_op=output[3];
-				table.rows[0].cells[1].innerHTML=cur_op[1];
-				table.rows[0].cells[2].innerHTML=cur_op[2];
-				table.rows[0].cells[3].innerHTML=cur_op[3];
-				table.rows[0].cells[4].innerHTML=cur_op[4];
-				table.rows[0].cells[5].innerHTML=cur_op[5];
+				table.rows[0].cells[1].innerHTML=cur_op[0];
+				table.rows[0].cells[2].innerHTML=cur_op[1];
+				table.rows[0].cells[3].innerHTML=cur_op[2];
+				table.rows[0].cells[4].innerHTML=cur_op[3];
+				table.rows[0].cells[5].innerHTML=cur_op[4];
 				var cur_op=output[4];
-				table.rows[0].cells[1].innerHTML=cur_op[1];
-				table.rows[0].cells[2].innerHTML=cur_op[2];
-				table.rows[0].cells[3].innerHTML=cur_op[3];
-				table.rows[0].cells[4].innerHTML=cur_op[4];
-				table.rows[0].cells[5].innerHTML=cur_op[5];
+				table.rows[0].cells[1].innerHTML=cur_op[0];
+				table.rows[0].cells[2].innerHTML=cur_op[1];
+				table.rows[0].cells[3].innerHTML=cur_op[2];
+				table.rows[0].cells[4].innerHTML=cur_op[3];
+				table.rows[0].cells[5].innerHTML=cur_op[4];
 			}
 			else
 			{
 				var table = document.getElementById("results_table").tBodies[0];
 				table.rows[0].cells[0].innerHTML=isChecked;
-				table.rows[0].cells[1].innerHTML=output[1];
-				table.rows[0].cells[2].innerHTML=output[2];
-				table.rows[0].cells[3].innerHTML=output[3];
-				table.rows[0].cells[4].innerHTML=output[4];
-				table.rows[0].cells[5].innerHTML=cur_op[5];
+				table.rows[0].cells[1].innerHTML=output[0];
+				table.rows[0].cells[2].innerHTML=output[1];
+				table.rows[0].cells[3].innerHTML=output[2];
+				table.rows[0].cells[4].innerHTML=output[3];
+				table.rows[0].cells[5].innerHTML=cur_op[4];
 				//var row = table.insertRow(0);
 				//var cell1 = row.insertCell(0);
 				//var cell2 = row.insertCell(1);
