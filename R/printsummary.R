@@ -26,10 +26,6 @@ printsummary <- function(df_full, dvname, preddv){
       df_full[,dvname]=as.character(dvname);
       preddv=as.character(preddv);
     } 
-	else {
-            df_full[,dvname]=as.numeric(dvname);
-            preddv=as.numeric(preddv);
-           }
       
    
   #override default 
