@@ -96,7 +96,7 @@ alert(dvname);	alert(isChecked);alert(preddv);
 			
 			if(isChecked=="OEM")
 			{	
-				var table = document.getElementById("results_table").tbodies[1];
+				var table = document.getElementById("results_table").tBodies[1];
 				var cur_op=output[1];
 				table.rows[0].cells[1].innerHTML=cur_op[1];
 				table.rows[0].cells[2].innerHTML=cur_op[2];
@@ -120,7 +120,7 @@ alert(dvname);	alert(isChecked);alert(preddv);
 			}
 			else
 			{
-				var table = document.getElementById("results_table").tbodies[0];
+				var table = document.getElementById("results_table").tBodies[0];
 				table.rows[0].cells[0].innerHTML=isChecked;
 				table.rows[0].cells[1].innerHTML=output[1];
 				table.rows[0].cells[2].innerHTML=output[2];
