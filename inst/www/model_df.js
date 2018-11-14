@@ -91,8 +91,8 @@ $("#show_perf").on("click", function(){
 		session.getObject(function(full_output){			
 			$("#building_inter").show().delay(1000).fadeOut(100,showModelResults);
 			
-			var sig_var=full_output[1]
-			var output=full_output[2]
+			var sig_var=full_output[2]
+			var output=full_output[1]
 			
 			alert(isChecked);
 			alert(full_output);
