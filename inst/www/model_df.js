@@ -96,10 +96,6 @@ $("#show_perf").on("click", function(){
 			
 			alert(isChecked);
 			alert(full_output);
-			alert([full_output]);
-			alert(sig_var);
-			alert(output);
-			alert([full_output][1]);
 			
 			if(isChecked=="OEM")
 			{	
@@ -130,9 +126,11 @@ $("#show_perf").on("click", function(){
 				table.rows[0].cells[5].innerHTML=cur_op[4];
 			}
 			else
-			{
+			{	
 				var table = document.getElementById("results_table").tBodies[0];
+				alert(isChecked,table.rows[0].cells[1].innerHTML);
 				table.rows[0].cells[0].innerHTML=isChecked;
+				
 				table.rows[0].cells[1].innerHTML=output[0];
 				table.rows[0].cells[2].innerHTML=output[1];
 				table.rows[0].cells[3].innerHTML=output[2];
@@ -145,6 +143,7 @@ $("#show_perf").on("click", function(){
 				//cell2.innerHTML = "NEW CELL2";
 			}
 			
+			alert(sig_var.length);
 			//Signififcant Variable List
 			for (var i=0; i < sig_var.length;++i)
 				{					
