@@ -88,7 +88,7 @@ $("#show_perf").on("click", function(){
     var req = ocpu.call("modelling_module", {
       "DV" : dvname, "model_selection" :  isChecked, "predictorClass" : preddv
     }, function(session){
-		session.getConsole(function(full_output){			
+		session.getObject(function(full_output){			
 			$("#building_inter").show().delay(1000).fadeOut(100,showModelResults);
 			
 			var sig_var=full_output[1]
