@@ -5,6 +5,21 @@
 #' @export
 #' @param df_full some object or dataset
 printsummary <- function(df_full, dvname, preddv){
+  
+  library(EvaluationMeasures)
+  library(pROC)
+  library(SDMTools)
+  library(party)
+  library(caret)
+  library(randomForest)
+  library(ROSE)
+  library(e1071)
+  library(car)
+  library(plyr)
+  library(dplyr)
+  library(caTools)
+  library(glmnet)
+  library(VIF)
 
   dvname=as.character(dvname);
   preddv=as.character(preddv);
