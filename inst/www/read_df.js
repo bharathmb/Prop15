@@ -33,7 +33,7 @@ $(document).ready(function(){
 	"dvname" : dvname,
 	"preddv" : preddv
     }, function(session){
-      session.getConsole(function(output){
+      session.getObject(function(output){
         $("#output code").text(output);	
 		$("#status1").text("Cleaning Successful! Setting up the results");
 	
@@ -51,7 +51,7 @@ $(document).ready(function(){
 	
 		function add_var_list()
 			{
-				alert("inside Add Options");
+				//alert("inside Add Options");
 				var vars;
 				var req = ocpu.call("imp_var_list", {	"target.var.name" : dvname}, 
 			function(session){
@@ -95,7 +95,7 @@ $(document).ready(function(){
 		//Adding Code for Significant variables graph
 				function plot_graph()
 			{
-				alert("inside Plot graph");
+				//alert("inside Plot graph");
 				
 				//var req = $("#plotdiv1").rplot("randomplot", {	nfield : 100, distfield : "normal"})
 				
