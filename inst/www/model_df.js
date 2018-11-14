@@ -83,7 +83,7 @@ $("#show_perf").on("click", function(){
 		
 		//alert(isChecked);
 
-alert(dvname);	alert(isChecked);alert(preddv);
+//alert(dvname);	alert(isChecked);alert(preddv);
     //perform the request
     var req = ocpu.call("modelling_module", {
       "DV" : dvname, "model_selection" :  isChecked, "predictorClass" : preddv
@@ -256,6 +256,8 @@ alert(dvname);	alert(isChecked);alert(preddv);
 				//var req = $("#plotdiv1").rplot("randomplot", {	nfield : 100, distfield : "normal"})
 				
 				var req = $("#plotdiv2").rplot("load_graph");
+				
+				alert("plotted");
 				
 				//if R returns an error, alert the error message
 				req.fail(function(){
