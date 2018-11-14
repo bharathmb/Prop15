@@ -131,11 +131,11 @@ $("#show_perf").on("click", function(){
 				alert(isChecked,table.rows[0].cells[0].innerHTML);
 				table.rows[0].cells[0].innerHTML=isChecked;
 				
-				table.rows[0].cells[1].innerHTML=output[0];
-				table.rows[0].cells[2].innerHTML=output[1];
-				table.rows[0].cells[3].innerHTML=output[2];
-				table.rows[0].cells[4].innerHTML=output[3];
-				table.rows[0].cells[5].innerHTML=output[4];
+				table.rows[0].cells[1].innerHTML=output[0]*100;
+				table.rows[0].cells[2].innerHTML=output[1]*100;
+				table.rows[0].cells[3].innerHTML=output[2]*100;
+				table.rows[0].cells[4].innerHTML=output[3]*100;
+				table.rows[0].cells[5].innerHTML=output[4]*100;
 				//var row = table.insertRow(0);
 				//var cell1 = row.insertCell(0);
 				//var cell2 = row.insertCell(1);
