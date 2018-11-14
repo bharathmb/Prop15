@@ -128,7 +128,7 @@ $("#show_perf").on("click", function(){
 			else
 			{	
 				var table = document.getElementById("results_table").tBodies[0];
-				alert(isChecked,table.rows[0].cells[1].innerHTML);
+				alert(isChecked,table.rows[0].cells[0].innerHTML);
 				table.rows[0].cells[0].innerHTML=isChecked;
 				
 				table.rows[0].cells[1].innerHTML=output[0];
