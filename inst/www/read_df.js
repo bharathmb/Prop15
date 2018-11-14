@@ -51,7 +51,7 @@ $(document).ready(function(){
 	
 		function add_var_list()
 			{
-				//alert("inside Add Options");
+				alert("inside Add Options");
 				var vars;
 				var req = ocpu.call("imp_var_list", {	"target.var.name" : dvname}, 
 			function(session){
@@ -95,7 +95,7 @@ $(document).ready(function(){
 		//Adding Code for Significant variables graph
 				function plot_graph()
 			{
-				//alert("inside Plot graph");
+				alert("inside Plot graph");
 				
 				//var req = $("#plotdiv1").rplot("randomplot", {	nfield : 100, distfield : "normal"})
 				
