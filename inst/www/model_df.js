@@ -92,7 +92,9 @@ alert(dvname);	alert(isChecked);alert(preddv);
 			$("#building_inter").show().delay(1000).fadeOut(100,showModelResults);
 			
 			var sig_var=full_output[1]
-			var output=full_output[2]			
+			var output=full_output[2]
+			
+			alert(full_output);
 			
 			if(isChecked=="OEM")
 			{	
@@ -253,7 +255,7 @@ alert(dvname);	alert(isChecked);alert(preddv);
 				
 				//var req = $("#plotdiv1").rplot("randomplot", {	nfield : 100, distfield : "normal"})
 				
-				var req = $("#plotdiv2").rplot("load_graph", {"dv":dvname});
+				var req = $("#plotdiv2").rplot("load_graph");
 				
 				//if R returns an error, alert the error message
 				req.fail(function(){
