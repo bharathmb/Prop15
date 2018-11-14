@@ -9,6 +9,7 @@ read_csv<-function(filename)
 {
 
 #install.packages("EvaluationMeasures")
+#install.packages("vif")
 #install.packages("pROC")
 #install.packages("SDMTools")
 #install.packages("party")
@@ -36,6 +37,7 @@ read_csv<-function(filename)
   library(dplyr)
   library(caTools)
   library(glmnet)
+  library(vif)
 
 
   library(utils)  
