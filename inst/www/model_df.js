@@ -95,6 +95,7 @@ $("#show_perf").on("click", function(){
 			var output=full_output[2]
 			
 			alert(full_output);
+			alert([full_output]);
 			
 			if(isChecked=="OEM")
 			{	
