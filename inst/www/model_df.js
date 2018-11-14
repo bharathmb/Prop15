@@ -102,21 +102,25 @@ alert(dvname);	alert(isChecked);alert(preddv);
 				table.rows[0].cells[2].innerHTML=cur_op[2];
 				table.rows[0].cells[3].innerHTML=cur_op[3];
 				table.rows[0].cells[4].innerHTML=cur_op[4];
+				table.rows[0].cells[5].innerHTML=cur_op[5];
 				var cur_op=output[2];
 				table.rows[0].cells[1].innerHTML=cur_op[1];
 				table.rows[0].cells[2].innerHTML=cur_op[2];
 				table.rows[0].cells[3].innerHTML=cur_op[3];
 				table.rows[0].cells[4].innerHTML=cur_op[4];
+				table.rows[0].cells[5].innerHTML=cur_op[5];
 				var cur_op=output[3];
 				table.rows[0].cells[1].innerHTML=cur_op[1];
 				table.rows[0].cells[2].innerHTML=cur_op[2];
 				table.rows[0].cells[3].innerHTML=cur_op[3];
 				table.rows[0].cells[4].innerHTML=cur_op[4];
+				table.rows[0].cells[5].innerHTML=cur_op[5];
 				var cur_op=output[4];
 				table.rows[0].cells[1].innerHTML=cur_op[1];
 				table.rows[0].cells[2].innerHTML=cur_op[2];
 				table.rows[0].cells[3].innerHTML=cur_op[3];
 				table.rows[0].cells[4].innerHTML=cur_op[4];
+				table.rows[0].cells[5].innerHTML=cur_op[5];
 			}
 			else
 			{
@@ -126,6 +130,7 @@ alert(dvname);	alert(isChecked);alert(preddv);
 				table.rows[0].cells[2].innerHTML=output[2];
 				table.rows[0].cells[3].innerHTML=output[3];
 				table.rows[0].cells[4].innerHTML=output[4];
+				table.rows[0].cells[5].innerHTML=cur_op[5];
 				//var row = table.insertRow(0);
 				//var cell1 = row.insertCell(0);
 				//var cell2 = row.insertCell(1);
