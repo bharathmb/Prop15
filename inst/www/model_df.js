@@ -137,7 +137,7 @@ $("#show_perf").on("click", function(){
 				table.rows[0].cells[2].innerHTML=output[1];
 				table.rows[0].cells[3].innerHTML=output[2];
 				table.rows[0].cells[4].innerHTML=output[3];
-				table.rows[0].cells[5].innerHTML=cur_op[4];
+				table.rows[0].cells[5].innerHTML=output[4];
 				//var row = table.insertRow(0);
 				//var cell1 = row.insertCell(0);
 				//var cell2 = row.insertCell(1);
